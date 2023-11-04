@@ -1,0 +1,141 @@
+/* css reset start*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* css reset finish */
+
+/* define colurs start*/
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+  --very-light-grey: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+}
+
+body,
+main a {
+  background-color: var(--very-light-grey);
+}
+
+h2 {
+  color: var(--very-light-grey);
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--transparent-white);
+  font-family: "Lexend Deca" sans-serif;
+  font-weight: 400;
+}
+/* define colurs finish */
+
+/* display: flex; justify-content: center; align-tems: center; min-height: 100vh. 
+Those 4 properties with its values allign content to the middle of the page, 
+Has to be applied to the parent of the element we want to center */
+
+.containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 40px;
+  flex-basis: 18.75rem;
+}
+
+.container a {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-top: 5.5rem;
+  text-decoration: none; /* This removes underline from a tag*/
+  text-align: center;
+  float: left;
+}
+
+.container-1 {
+  background-color: var(--bright-orange);
+  border-radius: 10px 0 0 10px;
+}
+
+.container-1 a {
+  color: var(--bright-orange);
+}
+
+.container-2 {
+  background-color: var(--dark-cyan);
+}
+
+.container-2 a {
+  color: var(--dark-cyan);
+}
+
+.container-3 {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+}
+
+.container-3 a {
+  color: var(--very-dark-cyan);
+}
+
+.attribution {
+  text-align: center;
+}
+
+@media (max-width: 376px) {
+  .containers {
+    flex-direction: column;
+  }
+
+  .container {
+    width: 18.75rem;
+    height: 31.25rem;
+  }
+  .container-1 {
+    border-radius: 10px 10px 0 0;
+    margin-top: 30px;
+  }
+  .container-3 {
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 30px;
+  }
+
+  .attribution {
+    font-size: 10px;
+  }
+}
